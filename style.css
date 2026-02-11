@@ -1,0 +1,91 @@
+:root {
+  --vit-color: #4A90E2;
+  --hep-color: #27AE60;
+  --accent-color: #E67E22;
+  --bg-color: #F8FAFC;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Pretendard', -apple-system, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.main-wrapper {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 850px) {
+  .main-wrapper { flex-direction: column; align-items: center; }
+}
+
+.app-card {
+  background: white;
+  flex: 1;
+  min-width: 340px;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.header h1 { margin: 0; font-size: 26px; }
+.vitamin-theme h1 { color: var(--vit-color); }
+.hepatitis-theme h1 { color: var(--hep-color); }
+.header p { color: #64748b; font-size: 14px; margin: 8px 0 0; }
+
+.input-section { margin-top: 24px; }
+.input-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+
+label { font-size: 13px; font-weight: 700; color: #334155; margin-bottom: 6px; }
+
+input {
+  padding: 12px;
+  border: 2px solid #E2E8F0;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus { border-color: var(--vit-color); }
+.hepatitis-theme input:focus { border-color: var(--hep-color); }
+
+button {
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.vitamin-theme button { background: var(--vit-color); }
+.hepatitis-theme button { background: var(--hep-color); }
+button:active { transform: scale(0.98); }
+
+.divider { height: 1px; background: #F1F5F9; margin: 24px 0; }
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px dashed #E2E8F0;
+}
+
+.remind-tag {
+  display: block;
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.hidden { display: none; }

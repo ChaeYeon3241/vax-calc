@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="main-wrapper">
+  <div class="app-card vitamin-theme">
+    <div class="header">
+      <h1>비타민 D</h1>
+      <p>3개월 간격 정기 접종</p>
+    </div>
+    <div class="input-section">
+      <div class="input-group">
+        <label>1차 접종일</label>
+        <input type="date" id="vitDate">
+      </div>
+      <button onclick="calcVit()">스케줄 계산</button>
+    </div>
+    <div id="vitResult" class="hidden">
+      <div class="divider"></div>
+      <ul id="vitList"></ul>
+    </div>
+  </div>
+
+  <div class="app-card hepatitis-theme">
+    <div class="header">
+      <h1>B형 간염</h1>
+      <p>1개월/5개월 간격 접종</p>
+    </div>
+    <div class="input-section">
+      <div class="input-group">
+        <label>1차 접종일</label>
+        <input type="date" id="hepDate1">
+      </div>
+      <div class="input-group">
+        <label>2차 실제 접종일 (지연 시 입력)</label>
+        <input type="date" id="hepDate2">
+      </div>
+      <button onclick="calcHepFinal()">스케줄 계산</button>
+    </div>
+    <div id="hepResult" class="hidden">
+      <div class="divider"></div>
+      <ul id="hepList"></ul>
+    </div>
+  </div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
